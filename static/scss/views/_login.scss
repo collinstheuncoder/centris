@@ -7,3 +7,10 @@
 .broker-login {
 	text-align: center;
 }
+
+.col {
+	&--google,
+	&--facebook {
+		padding: 0 !important;
+	}
+}

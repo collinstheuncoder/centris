@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
+import django_heroku 
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -165,3 +166,5 @@ SITE_ID = 1
 ACCOUNT_EMAIL_REQUIRED = True
 
 ACCOUNT_USERNAME_REQUIRED = False
+
+django_heroku.settings(locals())
