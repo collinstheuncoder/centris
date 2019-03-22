@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% block title %}<title>Centris</title>{% endblock %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
+  <link href="https://imgur.com/NrZIFNw.png" rel="icon" type="image/x-icon" />
+
+  <!-- Add additional CSS in static file -->
+  {% load staticfiles %}
+  <!-- Materialize -->
+  <link rel="stylesheet" href="{% static 'css/materialize.min.css' %}">
+  <!-- noUISlider -->
+  <link rel="stylesheet" href="{% static 'css/nouislider.min.css' %}">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="{% static 'css/css/all.css' %}">
+  <!-- Custom -->
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+  <header class="header row">
+    <div class="col s6 m4">
+      <a href="{% url 'home' %}"><img src="https://imgur.com/tTzEwSz.png" alt="Centris Logo"></a>
+    </div>
+    <div class="col s6 m4">
+      <nav class="nav">
+      	<div class="nav-item">
+      		<a href="#" class="dropdown-trigger nav-link" data-target='dropdown-buy'>Buy</a>
+      		<ul id='dropdown-buy' class='dropdown-content'>
+				    <li><a href="{% url 'property_list' %}" class="nav-link">Find a property</a></li>
+				    <li><a href="#!" class="nav-link">Buy with a broker</a></li>
+				    <li><a href="#!" class="nav-link">Steps involved in buying</a></li>
+            <li><a href="#!" class="nav-link">Risks of buying without a broker</a></li>
+				  </ul>
+      	</div>
+      	<div class="nav-item">
+      		<a href="#" class="dropdown-trigger nav-link" data-target='dropdown-sell'>Sell</a>
+      		<ul id='dropdown-sell' class='dropdown-content'>
+				    <li><a href="#!" class="nav-link">Selling with a broker</a></li>
+				    <li><a href="#!" class="nav-link">Steps involved in selling</a></li>
+				    <li><a href="#!" class="nav-link">Risks of selling without a broker</a></li>
+				  </ul>
+      	</div>
+      	<div class="nav-item">
+      		<a href="#" class="dropdown-trigger nav-link" data-target='dropdown-broker'>My Broker</a>
+      		<ul id='dropdown-broker' class='dropdown-content'>
+				    <li><a href="#!" class="nav-link">Find a broker</a></li>
+				    <li><a href="#!" class="nav-link">The role of a broker</a></li>
+				    <li><a href="#!" class="nav-link">The 10 qualities of a good broker</a></li>
+				    <li><a href="#!" class="nav-link">Become a broker</a></li>
+				  </ul>
+      	</div>
+      	<div class="nav-item">
+      		<a href="#" class="dropdown-trigger nav-link" data-target='dropdown-tools'>Tools</a>
+      		<ul id='dropdown-tools' class='dropdown-content'>
+				    <li><a href="#!" class="nav-link">one</a></li>
+				    <li><a href="#!" class="nav-link">two</a></li>
+				    <li><a href="#!" class="nav-link">three</a></li>
+				    <li><a href="#!" class="nav-link">three</a></li>
+				    <li><a href="#!" class="nav-link">three</a></li>
+				  </ul>
+      	</div>
+        <a href="#" class="nav-link"><i class="fas fa-search icon-search"></i></a>
+      </nav>
+    </div>
+    <div class="col s6 m4 col--user">
+      <div class="row-language">
+        <span>QC-EN</span>
+        <span>QC-FR</span>
+        <span><i class="fas fa-chevron-down icon-down"></i></span>
+        {% if user.is_authenticated %}
+          <p class="user-name">Hello {{ user.first_name }}</p>
+        {% endif %}
+      </div>
+      <div class="row-user">
+        {% if user.is_authenticated %}
+          <span class="dropdown-trigger" data-target="dropdown-user"><i class="fas fa-user-circle user-icons user-icons--user"></i></span>
+          <ul id='dropdown-user' class='dropdown-content'>
+            <li><a href="#!" class="nav-link">My Searches</a></li>
+            <li><a href="#!" class="nav-link">My Profile</a></li>
+            <li><a href="#!" class="nav-link">My Favourites</a></li>
+            <li><a href="#!" class="nav-link">Logout</a></li>
+          </ul>
+          <div class="user-saves">
+            <span><i class="fas fa-heart user-icons user-icons--save"></i></span>
+            <span class="user-saves-num">(4)</span>
+          </div>
+        {% else %}
+          <span><a href="{% url 'login' %}"><i class="fas fa-user-circle user-icons user-icons--user"></i></a></span>
+          <span><i class="fas fa-heart user-icons user-icons--save"></i></span>
+        {% endif %}
+      </div>
+    </div>
+  </header>
+  <main class="container-fluid">
+    {% block content %}{% endblock %}
+  </main>
+  <footer class="footer">
+    <div class="row row--top">
+      <div class="col s12 m4 col--blue">
+        <h4 class="h4">Discover Centris</h4>
+        <p>Centris.ca is powered by Centris, a company offering a wide range of technology tools and solutions tailored to meet the needs of Québec’s real estate brokers.</p>
+        <a href="#">Discover Centris</a>
+      </div>
+      <div class="col s12 m4 col--purple">
+        <h4 class="h4">Join our Team</h4>
+        <p>Are you looking for a stimulating work environment and interested in a career with us? We may have the perfect job for you.</p>
+        <a href="#">See all available positions</a> 
+      </div>
+      <div class="col s12 m4 col--green">
+        <h4 style="text-transform: uppercase;" class="h4">Contact Centris</h4>
+        <p>Do you have any questions or comments for us? Simply fill in the form designed for this purpose.</p>
+        <a href="#">Contact Centris</a>
+      </div>
+    </div>
+    <div class="row row--middle">
+      <div class="col s12 m4"><a href="#">View regions</a></div>
+      <div class="col s12 m4"><a href="#">Privacy policy and terms</a></div>
+      <div class="col s12 m4"><a href="#">Site map</a></div>
+    </div>
+    <div class="row row--bottom">
+      <div class="col s12 m6">&copy; Centris <span id="footer-year"></span>. All rights reserved.</div>
+      <div class="col s12 m6 icon-links">
+        <a href="#" class="icon-link icon-link--facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="icon-link icon-link--twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="icon-link icon-link--youtube"><i class="fab fa-youtube"></i></i></a>
+        <a href="#" class="icon-link icon-link--apple"><i class="fab fa-apple"></i></a>
+        <a href="#" class="icon-link icon-link--android"><i class="fab fa-android"></i></a>
+      </div>
+    </div>
+  </footer>
+  {% load staticfiles %}
+  <script src="{% static 'js/jquery-3.3.1.slim.min.js' %}"></script>
+  <script src="{% static 'js/materialize.min.js' %}"></script>
+  <script src="{% static 'js/nouislider.min.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

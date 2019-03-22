@@ -1,0 +1,96 @@
+.footer {
+	margin-top: auto;
+	
+	> .row {
+		padding: 1rem 5rem !important;
+
+		&--top {
+			background-color: #264557;
+
+			.col {
+				width: 30%;
+
+				&--blue {
+					border-top: 10px solid #5bb6bd;
+					margin-right: 1.75rem !important;
+				}
+
+				&--purple {
+					border-top: 10px solid #b995c4;
+					margin: 0 1.75rem !important;
+				}
+
+				&--green {
+					border-top: 10px solid #8ab11f;
+					margin-left: 1.75rem !important;
+				}
+			}
+		}
+
+		&--middle {
+			background-color: #1e3745;
+
+			.col {
+				&:nth-of-type(2) {
+					padding: 0 1.5rem;
+				}
+
+				&:last-of-type {
+					padding: 0 2.25rem;
+				}
+			}
+		}
+
+		&--bottom {
+			padding: 2rem 5rem !important;
+		}
+	}
+
+	.h4 {
+		text-transform: uppercase;
+		padding: 1rem 0;
+    font-size: 1.125rem;
+    color: #e6e5e4;
+
+    ~ p {
+    	margin-bottom: 1rem;
+    	color: #82a5bb;
+    }
+	}
+}
+
+.icon-links {
+	text-align: right;
+}
+
+.icon-link {
+	background-color: #039be5;
+  color: #ffffff;
+  border-radius: 50%;
+
+  &--facebook {
+		padding: 0.65rem 1rem;
+	}
+
+	&--twitter {
+		padding: 0.65rem 0.75rem;
+	}
+
+	&--youtube {
+		padding: 0.65rem 0.7rem;
+	}
+
+  &--apple {
+		padding: 0.65rem 0.9rem;
+		color: #039be5;
+  	background-color: #ffffff;
+  	border: 1px solid #039be5;
+	}
+
+	&--android {
+		padding: 0.65rem 0.85rem;
+		color: #039be5;
+  	background-color: #ffffff;
+  	border: 1px solid #039be5;
+	}
+}

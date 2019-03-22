@@ -1,0 +1,242 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="section section--welcome">
+	<p class="properties">{{ number_of_properties }} Properties Available</p>
+	<div class="search-box">
+		<form method="post" class="search-form">
+			{% csrf_token %}
+			<div class="row">
+				<div class="col s8 form-col">
+					<input placeholder="Search by city, region..." id="location" type="text" class="validate search-input">
+				</div>
+				<div class="col s4 form-col">
+					<button type="submit" class="search-btn">
+						<span>Search</span>
+						<span><i class="fas fa-search icon-search"></i></span>
+					</button>
+				</div>
+			</div>
+		</form>
+		<div id="price-slider"></div>
+		<div class="search-options row">
+			<div class="col s6 options options--type">
+				<button class="option-btn option-btn--selected">
+					<span><i class="fas fa-check icon-option"></i></span>
+					<span>Residential</span>
+				</button>
+				<button class="option-btn">
+					<span><i class="fas fa-check icon-option"></i></span>
+					<span>Commercial</span>
+				</button>
+			</div>
+			<div class="col s6 options options--price">
+				<button class="option-btn option-btn--selected">
+					<span><i class="fas fa-check icon-option"></i></span>
+					<span>For Sale</span>
+				</button>
+				<button class="option-btn">
+					<span><i class="fas fa-check icon-option"></i></span>
+					<span>For Rent</span>
+				</button>
+			</div>
+		</div>
+		<div id="toggle-advanced">
+			<p>Advanced criteria</p>
+			<i class="fas fa-chevron-down"></i>
+		</div>
+		<div class="advanced-settings">
+			<div class="row">
+				<h4 class="h4">Property Type</h4>
+				<div class="col s6 m4">
+					<p>
+			      <label>
+			        <input type="checkbox" />
+			        <span>Single-family home</span>
+			      </label>
+			    </p>
+			    <p>
+			      <label>
+			        <input type="checkbox" />
+			        <span>Condominium home</span>
+			      </label>
+			    </p>
+			    <p>
+			      <label>
+			        <input type="checkbox" />
+			        <span>Mobile home</span>
+			      </label>
+			    </p>
+				</div>
+				<div class="col s6 m4">
+					<p>
+			      <label>
+			        <input type="checkbox" />
+			        <span>Condo</span>
+			      </label>
+			    </p>
+					<p>
+			      <label>
+			        <input type="checkbox" />
+			        <span>Plex</span>
+			      </label>
+			    </p>
+			    <p>
+			      <label>
+			        <input type="checkbox" />
+			        <span>Hobby farm</span>
+			      </label>
+			    </p>
+				</div>
+				<div class="col s6 m4">
+					<p>
+			      <label>
+			        <input type="checkbox" />
+			        <span>Loft/Studio</span>
+			      </label>
+			    </p>
+					<p>
+			      <label>
+			        <input type="checkbox" />
+			        <span>Intergenerational</span>
+			      </label>
+			    </p>
+			    <p>
+			      <label>
+			        <input type="checkbox" />
+			        <span>Lot</span>
+			      </label>
+			    </p>
+				</div>
+			</div>
+			<div class="row">
+				<h4 class="h4">Features</h4>
+				<div class="col s12">
+					<div class="row">
+						<div class="col s12 m5 input-field">
+					    <select>
+					      <option value="" disabled selected>Number of bedrooms</option>
+					      <option value="1">1 bedroom</option>
+					      <option value="1+">1 bedroom or +</option>
+					      <option value="2">2 bedrooms</option>
+					      <option value="2+">2 bedrooms or +</option>
+					      <option value="3">3 bedrooms</option>
+					      <option value="3+">3 bedrooms or +</option>
+					      <option value="4">4 bedrooms</option>
+					      <option value="4+">4 bedrooms or +</option>
+					      <option value="5">5 bedrooms</option>
+					      <option value="5+">5 bedrooms or +</option>
+					    </select>
+						</div>
+						<div class="col m2"></div>
+						<div class="col s12 m5 input-field">
+							<select>
+					      <option value="" disabled selected>Number of bath/powder rooms</option>
+					      <option value="1+">1 bath/powder room or +</option>
+					      <option value="2+">2 bath/powder rooms or +</option>
+					      <option value="3+">3 bath/powder rooms or +</option>
+					      <option value="4+">4 bath/powder rooms or +</option>
+					      <option value="5+">5 bath/powder rooms or +</option>
+					    </select>
+						</div>
+					</div>
+					<div style="margin-bottom: 1rem" class="row">
+						<div class="col s12 m5 input-field">
+							<select>
+					      <option value="" disabled selected>Number of parking spaces</option>
+					      <option value="1+">1 parking space or +</option>
+					      <option value="2+">2 parking spaces or +</option>
+					      <option value="3+">3 parking spaces or +</option>
+					      <option value="4+">4 parking spaces or +</option>
+					      <option value="5+">5 parking spaces or +</option>
+					    </select>
+						</div>
+						<div class="col m2"></div>
+						<div class="col s12 m5 input-field">
+							<select>
+					      <option value="" disabled selected>Number of garages</option>
+					      <option value="1+">1 garage or +</option>
+					      <option value="2+">2 garages or +</option>
+					      <option value="3+">3 garages or +</option>
+					      <option value="4+">4 garages or +</option>
+					      <option value="5+">5 garages or +</option>
+					    </select>
+						</div>
+					</div>
+				</div>
+				<div class="col s6 m4">
+					<p>
+			      <label>
+			        <input type="checkbox" />
+			        <span>Pool</span>
+			      </label>
+			    </p>
+			    <p>
+			      <label>
+			        <input type="checkbox" />
+			        <span>Waterfront</span>
+			      </label>
+			    </p>
+				</div>
+				<div class="col s6 m4">
+					<p>
+			      <label>
+			        <input type="checkbox" />
+			        <span>Elevator</span>
+			      </label>
+			    </p>
+			    <p>
+			      <label>
+			        <input type="checkbox" />
+			        <span>Access to waterfront</span>
+			      </label>
+			    </p>
+				</div>
+				<div class="col s6 m4">
+					<p>
+			      <label>
+			        <input type="checkbox" />
+			        <span>Adapted for reduced mobility</span>
+			      </label>
+			    </p>
+			    <p>
+			      <label>
+			        <input type="checkbox" />
+			        <span>Navigable body of water</span>
+			      </label>
+			    </p>
+				</div>
+			</div>
+			<div class="row">
+				<h4 class="h4">Others</h4>
+			</div>
+		</div>
+	</div>
+</div>
+<section class="row section section--info">
+	<div class="col s12 m4">
+		<img src="https://imgur.com/lSXzYxT.png" alt="" class="section--info-img">
+		<h4 class="col-heading">All Properties</h4>
+		<hr class="section--info-divider">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium quas, possimus qui, totam ducimus sed accusamus assumenda. Ea, id. Similique.</p>
+	</div>
+	<div class="col s12 m4">
+		<img src="https://imgur.com/yomX3PE.png" alt="" class="section--info-img">
+		<h4 class="col-heading">All Agencies</h4>
+		<hr class="section--info-divider">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime est, quis. Necessitatibus tempore officia unde voluptates vel ratione, reprehenderit accusantium?</p>
+	</div>
+	<div class="col s12 m4">
+		<img src="https://imgur.com/JfqcF4v.png" alt="" class="section--info-img">
+		<h4 class="col-heading">All Brokers</h4>
+		<hr class="section--info-divider">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore aspernatur laboriosam maxime earum unde assumenda? Reiciendis, beatae reprehenderit aut repellat!</p>
+	</div>
+</section>
+<section class="row section section--about">
+	
+</section>
+<section class="row section section--broker-adv">
+	
+</section>
+{% endblock %}

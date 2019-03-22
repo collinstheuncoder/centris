@@ -1,0 +1,13 @@
+@import 'variables';
+@import 'mixins';
+@import 'base';
+
+@import 'layout/navbar';
+@import 'layout/footer';
+
+@import 'views/home';
+@import 'views/login';
+@import 'views/register';
+@import 'views/profile';
+@import 'views/property';
+@import 'views/broker';

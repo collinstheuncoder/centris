@@ -1,0 +1,418 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fafafa;
+}
+
+.row,
+.col {
+	margin: 0;
+	padding: 0;
+}
+
+.h4 {
+	margin: 0;
+	font-size: 1.25rem;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.dropdown-content li>a, 
+.dropdown-content li>span {
+	font-size: 0.85rem;
+}
+
+.separator {
+  border-bottom: 1px solid #cdcdcd;
+  margin: 1.75rem 0 1.25rem;
+  position: relative;
+  width: 100%;
+
+  &::before {
+  	background-color: #ffffff;
+		color: #cdcdcd;
+	  content: "OR";
+	  left: 47%;
+	  padding: 0 0.625rem;
+	  position: absolute;
+	  top: -0.75rem;
+	}
+}
+
+.btn {
+	&--google,
+	&--facebook {
+		font-weight: 600;
+		height: 100%;
+		padding: 0.25rem 0;
+		text-transform: initial;
+		width: 100%;
+
+		.fab {
+			font-size: 1.125rem;
+			margin-right: 1rem;
+		}
+	}
+
+	&--google {
+		background-color: #ffffff;
+		color: #333333;
+		margin-top: 0.5rem;
+
+		&:hover {
+			background-color: initial;
+		}
+	}
+
+	&--facebook {
+		background-color: #3b5998;
+		color: #ffffff;
+		margin-bottom: 0.5rem;
+
+		&:hover {
+			background-color: initial;
+		}
+	}
+
+	&--login,
+	&--signup {
+		font-weight: 600;
+		margin: 1rem 0;
+		text-transform: initial;
+		width: 100%;
+	}
+}
+
+
+/*** Header ***/
+
+.header {
+	display: flex;
+	align-items: center;
+	background-color: #ffffff;
+}
+
+.nav {
+	display: flex;
+	justify-content: space-between;
+	background: transparent;
+  border: none;
+  box-shadow: none;
+
+  &-item {
+
+  }
+
+	&-link {
+		font-weight: 600;
+    color: #1e3745 !important;
+    text-transform: uppercase;
+	}
+}
+
+.icon-search {
+	font-size: 1.25rem;
+	height: auto;
+}
+
+.col {
+	&--user {
+		display: flex;
+    align-items: center;
+    justify-content: flex-end;
+	}
+}
+
+.row-language {
+	display: flex;
+	margin-right: 1rem;
+	font-weight: 600;
+
+	span:nth-child(2) {
+		display: none;
+	}
+
+	.icon-down {
+		font-size: 0.75rem;
+    padding-left: 0.25rem;
+	}
+}
+
+.row-user {
+	display: flex;
+	margin-bottom: -0.35rem;
+}
+
+.user {
+	&-name {
+		margin-left: 1rem;
+	}
+
+	&-icons {
+		font-size: 1.5rem;
+
+		&--user {
+			color: #5bb6bd;
+			margin-right: 1rem;
+		}
+
+		&--save {
+			color: #ff0707;
+			margin-right: 0.5rem;
+		}
+	}
+
+	&-saves {
+		display: flex;
+		align-items: center;
+
+		&-num {
+			font-size: 1rem;
+			font-weight: 600;
+			display: inline-block;
+	    margin-top: -0.25rem;
+		}
+	}
+}
+
+
+
+.footer {
+	> .row {
+		padding: 1rem 5rem !important;
+
+		&--top {
+			background-color: #264557;
+
+			.col {
+				width: 30%;
+
+				&--blue {
+					border-top: 10px solid #5bb6bd;
+					margin-right: 1.75rem !important;
+				}
+
+				&--purple {
+					border-top: 10px solid #b995c4;
+					margin: 0 1.75rem !important;
+				}
+
+				&--green {
+					border-top: 10px solid #8ab11f;
+					margin-left: 1.75rem !important;
+				}
+			}
+		}
+
+		&--middle {
+			background-color: #1e3745;
+
+			.col {
+				&:nth-of-type(2) {
+					padding: 0 0.75rem !important;
+				}
+
+				&:last-of-type {
+					padding: 0 1.75rem !important;
+				}
+			}
+		}
+
+		&--bottom {
+			padding: 2rem 5rem !important;
+		}
+	}
+
+	.h4 {
+		text-transform: uppercase;
+		padding: 1rem 0;
+    font-size: 1.125rem;
+    color: #e6e5e4;
+
+    ~ p {
+    	margin-bottom: 1rem;
+    	color: #82a5bb;
+    }
+	}
+}
+
+.icon-links {
+	text-align: right;
+}
+
+.icon-link {
+	background-color: #039be5;
+  color: #ffffff;
+  border-radius: 50%;
+
+  &--facebook {
+		padding: 0.65rem 1rem;
+	}
+
+	&--twitter {
+		padding: 0.65rem 0.75rem;
+	}
+
+	&--youtube {
+		padding: 0.65rem 0.7rem;
+	}
+
+  &--apple {
+		padding: 0.65rem 0.9rem;
+		color: #039be5;
+  	background-color: #ffffff;
+  	border: 1px solid #039be5;
+	}
+
+	&--android {
+		padding: 0.65rem 0.85rem;
+		color: #039be5;
+  	background-color: #ffffff;
+  	border: 1px solid #039be5;
+	}
+}
+
+/*** Home ***/
+.section {
+	padding: 1rem;
+
+	&--welcome {
+		background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(https://www.centris.ca/master/images/bgheader_residential_3.jpg);
+		background-size: cover;
+		background-position: center;
+		padding-bottom: 3rem;
+
+		.properties {
+			color: #e6e5e4;
+			font-size: 2.25rem;
+			font-weight: 900;
+			text-align: center;
+			text-transform: uppercase;
+			margin-top: 1.5rem;
+			margin-bottom: 2.5rem;
+		}
+
+		.search-box {
+			max-width: 60rem;
+			margin: auto;
+			padding: 1.5rem;
+			background-color: #e6e5e4;
+		}
+
+		.search-input {
+			background-color: #ffffff;
+	    border: none;
+	    padding: 0.125rem 0 0.125rem 0.5rem;
+		}
+
+		.search-btn {
+			background: #5bb6bd;
+			border: 0;
+			color: #ffffff;
+			cursor: pointer;
+			font-weight: 600;
+			margin-left: 1rem;
+			padding: 1rem 0.25rem;
+			text-transform: uppercase;
+			width: 95%;
+
+			&:hover {
+				background-color: #264557;
+			}
+
+			span {
+				&:first-of-type {
+					margin-right: 1rem;
+				}
+
+				&:last-of-type {
+					margin-left: 1rem;
+				}
+			}
+		}
+
+		#toggle-advanced {
+			cursor: pointer;
+			font-size: 0.9rem;
+			font-weight: 600;
+			margin-bottom: 0.5rem;
+			margin-top: 0.5rem;
+			text-align: center;
+			text-transform: uppercase;
+		}
+
+		.advanced-settings {
+			.h4 {
+				margin-bottom: 0.5rem;
+				margin-top: 1rem;
+			}
+		}
+	}
+
+	&--info {
+		padding: 2rem 10rem !important;
+
+		.col {
+			text-align: center;
+
+			&-heading {
+				font-size: 1rem;
+				font-weight: 600;
+				margin-top: 0;
+				text-transform: uppercase;
+			}
+		}
+	}
+
+	&--about {
+
+	}
+
+	&--broker-adv {
+
+	}
+}
+
+/*** Log in/Sign up **/
+.login,
+.signup {
+	max-width: 30rem;
+  background-color: #fff;
+  margin: 3rem auto;
+  padding: 1rem;
+
+  .divider {
+  	margin: 1rem 0;
+  	border: none;
+  }
+}
+
+.col {
+	&--facebook,
+	&--google {
+		padding: 0 !important;
+	}
+}
+
+.form--login {
+	
+}
+
+.password-forgot{
+	display: block;
+}
+
+.password-forgot,
+.private-policy,
+.broker-login {
+	text-align: center;
+}

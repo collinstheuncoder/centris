@@ -1,0 +1,99 @@
+.header {
+	display: flex;
+	align-items: center;
+	background-color: #ffffff;
+}
+
+.nav {
+	display: flex;
+	justify-content: space-between;
+	background: transparent;
+  border: none;
+  box-shadow: none;
+
+  &-item {
+  	padding: 0 1rem;
+  	
+		&:hover {
+			background-color: #264557;
+		}
+  }
+
+	&-link {
+		font-weight: 600;
+    color: #1e3745 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    word-spacing: 0.125rem;
+
+    &:hover {
+    	background-color: #264557;
+    	color: #ffffff !important;
+    }
+	}
+}
+
+.icon-search {
+	font-size: 1.25rem;
+	height: auto;
+}
+
+.col {
+	&--user {
+		display: flex;
+    align-items: center;
+    justify-content: flex-end;
+	}
+}
+
+.row-language {
+	display: flex;
+	margin-right: 1rem;
+	font-weight: 600;
+
+	span:nth-child(2) {
+		display: none;
+	}
+
+	.icon-down {
+		font-size: 0.75rem;
+    padding-left: 0.25rem;
+	}
+}
+
+.row-user {
+	display: flex;
+	margin-bottom: -0.35rem;
+}
+
+.user {
+	&-name {
+		margin-left: 1rem;
+	}
+
+	&-icons {
+		font-size: 1.5rem;
+
+		&--user {
+			color: #5bb6bd;
+			margin-right: 1rem;
+		}
+
+		&--save {
+			color: #ff0707;
+			margin-right: 0.5rem;
+		}
+	}
+
+	&-saves {
+		display: flex;
+		align-items: center;
+
+		&-num {
+			font-size: 1rem;
+			font-weight: 600;
+			display: inline-block;
+	    margin-top: -0.25rem;
+		}
+	}
+}

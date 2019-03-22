@@ -1,0 +1,110 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.row,
+.col {
+  margin: 0;
+  padding: 0;
+}
+
+.h4 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.dropdown-content li>a, 
+.dropdown-content li>span {
+  font-size: 0.85rem;
+}
+
+.login,
+.signup {
+  max-width: 30rem;
+  background-color: #ffffff;
+  margin: 3rem auto;
+  padding: 1rem;
+
+  .divider {
+    margin: 1rem 0;
+    border: none;
+  }
+}
+
+.divider-or {
+  border-bottom: 1px solid #cdcdcd;
+  margin: 1.75rem 0 1.25rem;
+  position: relative;
+  width: 100%;
+
+  &::before {
+    background-color: #ffffff;
+    color: #cdcdcd;
+    content: "OR";
+    left: 47%;
+    padding: 0 0.625rem;
+    position: absolute;
+    top: -0.75rem;
+  }
+}
+
+.btn {
+  &--google,
+  &--facebook {
+    font-weight: 600;
+    height: 100%;
+    padding: 0.25rem 0;
+    text-transform: initial;
+    width: 100%;
+
+    .fab {
+      font-size: 1.125rem;
+      margin-right: 1rem;
+    }
+  }
+
+  &--google {
+    background-color: #ffffff;
+    color: #333333;
+    margin-top: 0.5rem;
+
+    &:hover {
+      background-color: initial;
+    }
+  }
+
+  &--facebook {
+    background-color: #3b5998;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+
+    &:hover {
+      background-color: initial;
+    }
+  }
+
+  &--login,
+  &--signup {
+    font-weight: 600;
+    margin: 1rem 0;
+    text-transform: initial;
+    width: 100%;
+  }
+}
+

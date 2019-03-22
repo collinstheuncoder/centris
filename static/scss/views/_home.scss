@@ -1,0 +1,184 @@
+.section {
+	padding: 1rem;
+
+	&--welcome {
+		background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(https://www.centris.ca/master/images/bgheader_residential_3.jpg);
+		background-size: cover;
+		background-position: center;
+		padding-bottom: 3rem;
+
+		.properties {
+			color: #e6e5e4;
+			font-size: 2.25rem;
+			font-weight: 900;
+			text-align: center;
+			text-transform: uppercase;
+			margin-top: 1.5rem;
+			margin-bottom: 2.5rem;
+		}
+
+		.search-box {
+			max-width: 60rem;
+			margin: auto;
+			padding: 1.5rem;
+			background-color: #e6e5e4;
+		}
+
+		.form-col {
+			&.s8 {
+				padding-left: 0;
+			}
+
+			&.s4 {
+				padding-right: 0;
+			}
+		}
+
+		.search-input {
+			background-color: #ffffff;
+	    border: none;
+	    padding: 0.125rem 0 0.125rem 0.5rem;
+		}
+
+		.search-btn {
+			background: #5bb6bd;
+			border: 0;
+			color: #ffffff;
+			cursor: pointer;
+			font-weight: 600;
+			margin-left: 1rem;
+			padding: 1rem 0.25rem;
+			text-transform: uppercase;
+			width: 95%;
+
+			&:hover {
+				background-color: #264557;
+			}
+
+			span {
+				&:first-of-type {
+					margin-right: 1rem;
+				}
+
+				&:last-of-type {
+					margin-left: 1rem;
+				}
+			}
+		}
+
+		.search-options {
+			margin: 1rem 0;
+		}
+
+		.options {
+			display: flex;
+
+			&--type {
+				padding-left: 0;
+				border-right: 1px solid #ffffff;
+			}
+
+			&--price {
+				padding-right: 0;
+			}
+		}
+
+		.option {			
+			&-btn {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background-color: #82a5bb;
+				border: 0;
+				color: #ffffff;
+				cursor: pointer;
+				font-weight: 600;
+				margin-left: 1rem;
+				padding: 1rem 0.25rem;
+				text-transform: uppercase;
+				width: 100%;
+
+				.icon-option {
+					visibility: hidden;
+				}
+
+				span:first-of-type {
+					display: none;
+				}
+
+				&--selected {
+					background-color: #264557;
+					justify-content: space-evenly;
+
+					span:first-of-type {
+						display: inline-block;
+					}
+
+					.icon-option {
+						visibility: visible; 
+					}
+				}
+
+				&:first-of-type {
+					margin-left: 0;
+				}
+
+				&:last-of-type {
+					margin-right: 0;
+				}
+			}
+		}
+
+		#toggle-advanced {
+			cursor: pointer;
+			font-size: 0.9rem;
+			font-weight: 600;
+			margin-bottom: 0.5rem;
+			margin-top: 0.5rem;
+			text-align: center;
+			text-transform: uppercase;
+		}
+
+		.advanced-settings {
+			display: none;
+			
+			.h4 {
+				margin-bottom: 0.5rem;
+				margin-top: 1rem;
+			}
+		}
+	}
+
+	&--info {
+		padding: 2rem 10rem !important;
+
+		.col {
+			text-align: center;
+
+			&-heading {
+				font-size: 1rem;
+				font-weight: 600;
+				margin-top: 0;
+				text-transform: uppercase;
+			}
+		}
+
+		&-img {
+			height: 10rem;
+		}
+
+		&-divider {
+			border: 1px solid #cdcdcd;
+			border-bottom: none;
+			margin-bottom: 0.35rem;
+		}
+	}
+
+	&--about {
+
+	}
+
+	&--broker-adv {
+
+	}
+}

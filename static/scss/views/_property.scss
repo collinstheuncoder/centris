@@ -1,0 +1,95 @@
+#list,
+#thumbnail,
+#summary {
+	margin-top: 3rem;
+}
+
+.property {
+	margin: 0 0 1rem;
+	display: flex;
+
+	&-list {
+		padding: 2rem 5rem;
+	}
+
+	&-tabs {
+		padding: 0 !important; 
+	}
+
+	&-img {
+		background: url(https://imgur.com/mqNGvaR.jpg);
+		background-position: center;
+		height: 7.5rem;
+	}
+
+	&-info {
+		display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 0.5rem 1rem;
+	}
+
+	.col {
+		&-left {
+			width: 65%;
+
+			> .row {
+				text-transform: uppercase;
+				font-size: 0.95rem;
+				margin-bottom: 0.5rem;
+				word-spacing: 0.35rem;
+				padding-top: 0.5rem;
+			}
+		}
+
+		&-right {
+			display: flex;
+	    align-items: center;
+	    justify-content: flex-end;
+	   	width: 35%;
+		}
+	}
+
+	&-name,
+	&-price {
+		font-weight: 600;
+	}
+
+	&-name,
+	&-dimensions {
+		border-right: 1px solid #e9e9e9;
+		padding-right: 0;
+	}
+
+	&-name {
+		color: $primary-color;
+	}
+
+	&-dimensions {
+		color: $secondary-color;
+	}
+
+	&-price {
+		color: $btn-color;
+	}
+
+	&-location {
+		color: $secondary-color;
+		font-weight: 600;
+	}
+
+	.btn--summary {
+		background-color: $btn-color;
+	}
+
+	.icon-save {
+		font-size: 1.5rem;
+    margin-left: 2rem;
+    color: #9e9e9e;
+	}
+}
+
+.summary {
+	background-color: #ffffff;
+	padding: 1rem;
+}

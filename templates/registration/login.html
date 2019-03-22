@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="login">
+	<div class="row">
+		<div class="col s12 col--facebook">
+			<a href="#" class="btn btn--facebook"><i class="fab fa-facebook-f"></i> Log in with Facebook</a>
+		</div>
+		<div class="col s12 col--google">
+			<a href="#" class="btn btn--google"><i class="fab fa-google"></i> Log in with Google</a>
+		</div>
+	</div>
+	<div class="divider-or"></div>
+	<form method="post" class="form form--login">
+	  {% csrf_token %}
+	  {{ form.as_p }}
+	  <button type="submit" class="waves-effect waves-light btn btn--login">Login with my email</button>	  
+	</form>
+	<a href="#" class="password-forgot">Forgot your password?</a>
+	<hr class="divider">
+	<p class="broker-login">You are a real estate broker? <a href="#">Broker login</a></p>
+</div>
+{% endblock %}
