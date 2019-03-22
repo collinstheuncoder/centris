@@ -1,1 +1,1 @@
-web: gunicorn centris-1988.wsgi --log-file -
+web: gunicorn server.wsgi --log-file -
